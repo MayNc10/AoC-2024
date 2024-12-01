@@ -1,3 +1,5 @@
 **.jar
 jar/
 input/
+**.hs
+**.o
