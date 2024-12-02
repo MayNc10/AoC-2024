@@ -7,3 +7,4 @@ jar/
 input/
 **.hi
 **.o
+haskell/build/
