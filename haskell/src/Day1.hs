@@ -1,8 +1,10 @@
+module Day1 (day1) where
+
 import Data.List
 import System.IO
 import Control.Monad
 
-main = do
+day1 = do
     contents <- readFile "input/day1.txt"
     let line_arr = map words (lines contents)
     let list1 = getList line_arr 0
