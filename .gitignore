@@ -8,3 +8,6 @@ input/
 **.hi
 **.o
 haskell/build/
+kotlin/.gradle
+kotlin/build
+dist-newstyle/
