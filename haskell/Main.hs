@@ -3,5 +3,6 @@ module Main (main) where
     import Day2
     import Day3
     import Day4
+    import Day5
     main = do
-        Day4.day4
+        Day5.day5
