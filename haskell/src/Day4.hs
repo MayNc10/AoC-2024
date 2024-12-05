@@ -9,10 +9,10 @@ day4 = do
     contents <- readFile "input/day4.txt"
     let line_arr = lines contents
     print (part1 line_arr)
+    print (part2 line_arr)
 
 part1 :: [String] -> Int
 part1 chars = sum (map (`countXmas` chars) [0 .. (length chars * length (head chars) - 1) ])
-
 
 countXmas :: Int -> [String] -> Int
 countXmas idx chars = length (filter (\s -> lineMatch s r_idx c_idx chars) slopes)
@@ -35,3 +35,23 @@ between x y z
   |x <= y = y < z
   |otherwise = False
 
+part2 :: [String] -> Int
+part2 chars = length (filter (`isXMAS` chars) [0 .. (length chars * length (head chars) - 1) ])
+
+isXMAS :: Int -> [String] -> Bool
+isXMAS idx chars =
+    (r_idx /= 0 && r_idx /= length chars - 1)
+    && (c_idx /= 0 && c_idx /= length (head chars) - 1)
+    && ((chars !! r_idx) !! c_idx == 'A')
+    && isMS c1 c2
+    && isMS c3 c4
+    where
+        r_idx = div idx (length (head chars))
+        c_idx = mod idx (length (head chars))
+        c1 = (chars !! (r_idx - 1)) !! (c_idx - 1)
+        c2 = (chars !! (r_idx + 1)) !! (c_idx + 1)
+        c3 = (chars !! (r_idx - 1)) !! (c_idx + 1)
+        c4 = (chars !! (r_idx + 1)) !! (c_idx - 1)
+
+isMS :: Char -> Char -> Bool
+isMS c1 c2 = (c1 /= c2) && (c1 == 'M' || c1 == 'S') && (c2 == 'M' || c2 == 'S')
