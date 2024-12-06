@@ -1,5 +1,3 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Avoid lambda" #-}
 module Day5 (day5) where
 
 import Data.List
