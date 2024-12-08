@@ -10,5 +10,6 @@ input/
 haskell/build/
 kotlin/app/build
 kotlin/.gradle
+kotlin/.kotlin
 kotlin/build
 dist-newstyle/
