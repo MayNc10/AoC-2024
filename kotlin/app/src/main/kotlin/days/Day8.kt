@@ -3,7 +3,6 @@ package days.day8
 import java.io.File
 
 import kotlin.math.*
-import days.day8.antinodesHarmonic
 
 fun day8() {
     val chars = File("../../input/day8.txt").readText().lines().map { s -> s.toCharArray().toList() } 
