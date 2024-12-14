@@ -1,7 +1,6 @@
 package days.day10
 
 import java.io.File
-import kotlin.collections.last
 
 // search stuff
 typealias Pos = Pair<Int, Int>
