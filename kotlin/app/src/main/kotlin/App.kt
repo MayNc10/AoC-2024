@@ -8,6 +8,7 @@ import days.day8.day8 as day8;
 import days.day9.day9 as day9;
 import days.day10.day10 as day10;
 import days.day11.day11 as day11;
+import days.day12.day12 as day12;
 
 fun main() {
     //day1()
@@ -19,5 +20,6 @@ fun main() {
     //day8()
     //day9()
     //day10()
-    day11()
+    //day11()
+    day12()
 }
